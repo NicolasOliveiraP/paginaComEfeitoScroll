@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👀Pagina Inicio</title>
+</head>
+
+<body style="background-color: rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255);">
+
+    <h1>Ok👍</h1>
+    <p>👍👀😊🤣</p>
+    <label for="Nome">Nome</label>
+    <input id="Nome" type="text" placeholder="Ex: Usuário"><br><br>
+    <button onclick="boasVindas()">Clique aqui</button><br><br>
+    <button onclick="parOuImpar()">Par ou Impar</button><br><br>
+    <button onclick="somaDaMedia()">Média</button><br><br>  
+    <button onclick="opcao()">Temperatura🥵</button><br><br>
+    <button onclick="peixin()">Peixinho🐠</button><br><br>
+    <button onclick="idade()">Idade pae rs</button><br><br>
+    <button onclick="cachorro()">Cachorro 🐶</button><br><br>
+    <button onclick="pagCalcMedia()">MediaSysten</button><br><br>
+    <script>
+        function boasVindas() {
+            let Nome = document.getElementById("Nome").value;
+            let ano = prompt("Bem vindo, " + Nome + "Digite sua data de nascimento!");
+            if (2024 - ano > 17) {
+                alert("Você tem " + (2024 - ano) + "Anos")
+            }
+            else {
+                alert("Portanto vc é menor de idade tens " + (2024 - ano) + "Anos");
+            }
+        }
+
+        function parOuImpar() {
+            let numero = prompt("Digite um número");
+            if (numero % 2 == 1) {
+                alert("É impar")
+            }
+            else {
+                alert("É par")
+            }
+        }
+
+        function somaDaMedia(){
+            let n1 = Number(prompt("Digite um número"));
+            let n2 = Number(prompt("Digite outro número"));
+            if (somaDaMedia = (n1 + n2) /2){
+                alert("A sua média é: " + somaDaMedia)
+            }
+        }
+
+        function opcao() {
+            let opcao = prompt("Escolha a opção: (1 = C para F, 2 = F para C)")
+            if(opcao == 1){
+                let f = prompt("Digite o valor em C: ");
+                let r = f*9/5 + 32
+                alert("A temperatura em F é: " +r)
+            }
+            else if(opcao == 2){
+                let c = prompt("Digite o valor em F: ");
+                let r = (c-32)*5/9
+                alert("A temperatura em C é: " + r) // c = (f-32) /1,8
+            }
+        }
+
+        function peixin(){
+            let pesoPermitido = Number(prompt("Digite o Peso Permitido: "));
+            let quatidadePescada = Number(prompt("Digite o peso pescado"));
+            let multaPorPeso = Number(prompt("Digite a multa por excesso"));
+            if(quatidadePescada > pesoPermitido){
+                let diferenca = (quantidadePescada - pesoPermitido)
+                let multa = (diferenca * multaPorPeso)
+                alert("O peso excedeu em "+diferenca+"Kg, portanto deverá pagar multa de R$"+multa )
+            }
+            
+        }
+        function cachorro(){
+            let idadeCachorro = Number(prompt("Qual a idade do seu cachorro? "))
+            let diferencaCachorro = (idadeCachorro * 7)
+            if(diferencaCachorro > 65){
+                alert("Seu cachorro tem: " +diferencaCachorro + " Anos em idade de cachorro e já pode se aposentar.")
+            }
+            else if(diferencaCachorro){
+                alert("Seu cachorro tem: " +diferencaCachorro+" Anos em idade de cachorro e não pode se aposentar")
+            }
+
+        }
+        function pagCalcMedia(){
+           window.open("Exercicio02.HTML");
+            // window.location.href = "https://www.proghub.com.br/";
+        }
+
+    </script>
+
+</body>
+</html>
